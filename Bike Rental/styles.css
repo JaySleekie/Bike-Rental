@@ -1,0 +1,358 @@
+/* Remove default browser margin and padding. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom css props */
+
+:root {
+  --heading-large: 45px;
+  --heading-medium: 32px;
+  --heading-small: 30px;
+  --paragraph-small: 18px;
+  --paragraph-medium: 20px;
+  --paragraph-large: 22px;
+  --paragraph-text-color: #000;
+  --heading-text-color: #fafafa;
+  --call-to-action-buttons: #f93030;
+}
+
+/* added a google font to the whole body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* nav styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  padding: 2em;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  margin-right: 10%;
+}
+.navlinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.navlinks a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #fafafa;
+}
+
+.navlinks a:hover {
+  color: red;
+}
+
+.navlinks li {
+  list-style: none;
+}
+
+
+/* Hamburger Menu */
+.burgery {
+  display: none;
+}
+
+.burgery div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger media queries and nav */
+@media screen and (max-width: 1024px) {
+  .navlinks {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .logo {
+    margin-right: 40%;
+  }
+
+  .navlinks {
+    position: absolute;
+    right: 0;
+    height: 80vh;
+    width: 50vw;
+    top: 10.2vh;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+  }
+
+  .navlinks a:hover {
+    background-color: var(--call-to-action-buttons);
+    color: var(--heading-text-color);
+  }
+
+
+
+  .navlinks li {
+    opacity: 0;
+  }
+
+  .burgery {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes linkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* burger toggle icon animation */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -4px);
+  }
+}
+
+/* Nav Button Style */
+.signup-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  border-style: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signup-btn:hover {
+  background-color: var(--call-to-action-buttons);
+  color: var(--heading-text-color)
+}
+
+/*styling the background image */
+.bk-image {
+  background-image: url("./Images/hero3.jpg");
+  background-position: 10% center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 3;
+  background-size: 100vw 100vh;
+}
+
+
+.hero-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    padding-top: 10px;
+
+}
+
+.hero-text h1 {
+  color: var(--heading-text-color);
+  font-size: 70px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.hero-text p {
+    margin: 10px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 50px;
+
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+}
+
+.hero-btn {
+  height: 50px;
+  width: 130px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--call-to-action-buttons);
+  border: none;
+  color: #fff;
+  margin-top: 4%;
+  font-size: 20px;
+}
+
+.hero-btn:hover {
+  background-color: var(--heading-text-color);
+  color: #000;
+}
+/* styling the container */
+section3
+    .container1{
+        background-color:burlywood;
+        width: 300px;
+        height: 200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+                 }
+    .container2{
+        background-color: darkslategrey;
+        width: 300px;
+        height: 200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+        
+    }
+.container3 {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+}
+.container4 {
+  background-color: rgb(236, 72, 102);
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+}
+/*styles for advantage section*/
+.section2{
+  padding-top: 20px;
+  background: rgb(80, 80, 76);
+  color: #fafafa;
+}
+.section2 h2{
+  text-align: center;
+}
+.section2 .bigline{
+  width: 2.5%;
+  height: 5px;
+  background-color: #fafafa;
+  border:0 none;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.section2 hr{
+  width: 10%;
+  height: 5px;
+  background-color: #fafafa;
+  border:0 none;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.advantages{
+  display: grid;
+  position: inline-block;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+}
+
+.bike_rental{
+  grid-column: 1/2;
+  /*background: green;*/
+  place-self: center;
+  text-align: center;
+}
+.booking{
+  grid-column: 2/3;
+  /*background: rgb(236, 213, 0);*/
+  place-self: center;
+  text-align: center;
+}
+.guided_tour{
+  grid-column: 3/4;
+  /*background: rgb(155, 2, 2);*/
+  place-self: center;
+  text-align: center;
+}
+.bike_repair{
+  grid-column: 4/5;
+ /* background: rgb(2, 189, 222);*/
+  place-self: center;
+  text-align: center;
+}
+
+.advantages button{
+  width: 75px;
+  height: 75px;
+  color: #fafafa;
+  border-radius: 37px;
+  background: transparent;
+  z-index: 1;
+  outline: none;
+  border: 1px solid #fafafa;
+}
+.advantages p{
+  padding:10px;
+}
